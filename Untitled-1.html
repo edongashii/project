@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <title>Forma Aplikuese</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .permbajtja {
+            border-radius: 5px;
+            background-color: #f3f3f3;
+            padding: 30px;
+        }
+
+        .kolona-1 {
+            float: left;
+            width: 25%;
+            margin-top: 5px;
+        }
+
+        .kolona-2 {
+            float: left;
+            width: 25%;
+            margin-top: 5px;
+        }
+
+        .rreshti:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        label {
+            padding: 15px 15px 15px 0px;
+            display: inline-block;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            resize: none;
+        }
+
+        input[type=submit] {
+            background-color: forestgreen;
+            padding: 15px 20px;
+            border: none;
+            border-top-left-radius: 20px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: lawngreen;
+        }
+        
+        @media screen and (max-width: 600px)
+        {
+            .kolona-1,
+            .kolona-2,
+            input[type=submit] {width: 100%; margin-top: 0%}
+        }
+        
+    </style>
+        
+        
+
+</head>
+
+<body>
+
+    <h2>Forme aplikuese, responsive, e cila paraqitet ne baze te madhesis se faqes(ekranit).</h2>
+    <p>Ne momentin qe une e zmadhoj dritaren e faqes, shihet forma aplikuese e plote, kur e zvogelojme(ja caktojme nje px) psh 600px apo 10% te faqes, kolonat dalin nje pas nje...</p>
+
+    <div class="permbajtja">
+        <form action="dergesaneemail.php">
+
+            <div class="rreshti">
+                <div class="kolona-1">
+                    <label for="emri">Emri</label>
+                </div>
+                <div class="kolona-2">
+                    <input type="text" id="emri" name="emri" placeholder="Emri juaj...">
+                </div>
+            </div>
+
+            <div class="rreshti">
+                <div class="kolona-1">
+                    <label for="mbiemri">Mbiemri</label>
+                </div>
+                <div class="kolona-2">
+                    <input type="text" id="mbiemri" name="mbiemri" placeholder="Mbiemri juaj...">
+                </div>
+            </div>
+
+            <div class="rreshti">
+                <div class="kolona-1">
+                    <label for="shteti">Shteti</label>
+                </div>
+                <div class="kolona-2">
+                    <select id="shteti" name="shteti">
+                        <option value="zgjedhe nje opsion">Zgjedhe nje opsion</option>
+                        <option value="kosove">Kosove</option>
+                        <option value="shqiperi">Shqiperi</option>
+                        <option value="Amerike">Amerike</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rreshti">
+                <div class="kolona-1">
+                    <label for="mesazhi">Mesazhi</label>
+                </div>
+                <div class="kolona-2">
+                    <textarea id="mesazhi" name="mesazhi" placeholder="Verejtje, keshille apo informata..." style="height: 200px"></textarea>
+                </div>
+            </div>
+
+            <div class="rreshti">
+                <div class="kolona-1"></div>
+                <div class="kolona-2">
+                    <input type="submit" value="dergo">
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+
+
+
+
+</body></html>
